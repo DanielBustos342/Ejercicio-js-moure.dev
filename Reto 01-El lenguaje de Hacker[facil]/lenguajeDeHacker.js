@@ -6,3 +6,62 @@
  *   con el alfabeto y los números en "leet".
  *   (Usa la primera opción de cada transformación. Por ejemplo "4" para la "a")
  */
+
+const abcHaker = {
+    ' ': ' ',
+    a: '4',
+    b: 'I3',
+    c: '[',
+    d: ')',
+    e: '3',
+    f: '|=',
+    g: '&',
+    h: '#',
+    i: '1',
+    j: ',_|',
+    k: '>|',
+    l: '1',
+    m: '/\\/\\',
+    n: '^/',
+    o: '0',
+    p: '|*',
+    q: '(_,)',
+    r: 'I2',
+    s: '5',
+    t: '7',
+    u: '(_)',
+    v: '\\/',
+    w: '\\/\\/',
+    x: '><',
+    y: 'j',
+    z: '2',
+    1: 'L',
+    2: 'R',
+    3: 'E',
+    4: 'A',
+    5: 'S',
+    6: 'b',
+    7: 'T',
+    8: 'B',
+    9: 'g',
+    0: 'o'
+}
+const frase = 'HoLa Mundo aQui Traduciendo uNa orAciOn{} dE eSpañol a HackeR';
+
+function traductorHacker(frase){
+    frase = frase.toLowerCase().split('');
+
+    const traducirFrase = frase.map(letra => {
+        if (abcHaker.hasOwnProperty(letra)) {
+            return abcHaker[letra];
+        }else if (letra === ' ') {
+            return letra;
+        }else{
+            return letra;
+        }
+    })
+    const frasTraducida = traducirFrase.join('');
+    return frasTraducida;
+}
+const fraseTraducida = traductorHacker(frase);
+console.log(fraseTraducida);
